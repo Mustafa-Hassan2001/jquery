@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+<head>
+<style>
+li {
+    border: 1px solid #999;
+    height: 2em;
+    width: 2em;
+}
+
+li.selected {
+    background: green;
+}
+ul {
+    list-style: none outside;
+    padding: 0;
+}
+</style>
+<script src="jquery-3.1.1.min.js"></script>
+
+<script>
+$(function () { // same as (document).ready(function () {..})
+  var slides = $("#slides li"); // find the slides once
+
+  // common next/prev function
+  function changeSlide(direction) {
+    var target,
+        current = slides.filter(".selected"); // find the current slide
+    target = current[direction](); // call either .next() or .prev()
+    if(target.length) { // if there is a next/prev slide...
+      current.removeClass();
+      target.addClass("selected");
+    }
+  }
+    $(".next").on("click", function () { changeSlide('next') });
+  $(".prev").on("click", function () { changeSlide('prev') });
+});
+  </script>
+
+<title>
+</title>
+</head>
+<body>
+<ul id="slides">
+    <li class="selected"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<button class="prev">Prev</button> 
+<button class="next">Next</button>
+</body>
+</html>

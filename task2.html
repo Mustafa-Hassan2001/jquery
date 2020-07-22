@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<style>
+table,th, td {
+border:1px solid black;
+width:50px;
+}
+</style>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+ var toAa = $('input[name=product]').val();
+ var pq=$('.rt');
+ var pri=toA*pq;
+ $('.ne').text('pri');
+})
+</script>
+</head>
+<body>
+<table>
+<tr>
+<th>Product_id</th>
+<th>Product_cost</th>
+<th>Product_name</th>
+<th>Product_available</th>
+<th>Product_quantity</th>
+<th>Total cost</th></tr>
+<tr>
+<td>1</td>
+<td class="rt">50</td>
+<td>a</td>
+<td>10</td>
+<td><input type="text" name="product"></td>
+<td class="ne"></td>
+</tr>
+<tr>
+<td>2</td>
+<td>100</td>
+<td>b</td>
+<td>15</td>
+<td><input type="text"></td>
+<td></td></tr>
+<tr>
+<td>3</td>
+<td>150</td>
+<td>c</td>
+<td>8</td>
+<td><input type="text"></td>
+<td></td></tr>
+<tr>
+<td>4</td>
+<td>80</td>
+<td>d</td>
+<td>5</td>
+<td><input type="text"></td>
+<td></td></tr>
+<tr>
+<td>5</td>
+<td>70</td>
+<td>e</td>
+<td>6</td>
+<td><input type="text"></td>
+<td></td></tr>
+
+</table>
+<button>Final Total cost</button>
+<br>
+<body>
+</html>

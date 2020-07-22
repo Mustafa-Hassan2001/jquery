@@ -1,0 +1,1130 @@
+
+--------------------------------------------------
+variables-
+    var $target =$('#tr');
+    $target.fadeOut('fast');
+------------------------------------------------------------------------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").toggle();
+    });
+});
+</script>
+.......
+<p>This is another paragraph.</p>
+<button>Click me</button>
+----------------------------------------------
+<script>
+$( document ).click(function() {
+  $( "#toggle" ).toggle( "bounce", { times: 3 }, "slow" );
+});
+</script>
+.........
+<p>Click anywhere to toggle the box.</p>
+<div id="toggle"></div>
+------------------------------------------
+<script>
+$(document).ready(function(){
+$( ".third-item" ).next().css( "background-color", "red" );
+});
+</script>
+......
+<ul>
+  <li>list item 1</li>
+  <li>list item 2</li>
+  <li class="third-item">list item 3</li>
+  <li>list item 4</li>
+  <li>list item 5</li>
+ </ul>
+----------------------------------------
+<script>
+$(document).ready(function(){
+    $("#q").click(function(){
+	$("p").css("background-color", "red");
+  });
+   });
+  </script>
+.......
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button id="q">Add a class name to the first p element</button>
+------------------------------------------
+<script>
+$(document).ready(function(){
+    $("p:nth-child(3)").css("background-color", "yellow");
+});
+</script>
+..........
+<body>
+<h1>This is a heading in body</h1>
+<p>The first paragraph in body.</p>
+<p>The second paragraph in body (and the 3rd child element in body).</p>
+<div style="border:1px solid;">
+  <span>This is a span element in div</span>
+  <p>The first paragraph in div.</p>
+  <p>The second paragraph in another div (and the 3rd child element in this div).</p>
+  <p>The last paragraph in div.</p>
+</div><br>
+<div style="border:1px solid;">
+  <p>The first paragraph in another div.</p>
+  <p>The second paragraph in another div.</p>
+  <p>The last paragraph in another div (and the 3rd child element in this div).</p>
+</div>
+<p>The last paragraph in body.</p>
+</body>
+-----------------------------------------
+p:nth-child(3)/p:odd()/p:even()
+--------------------------------------------
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    alert("Text: " + $("#test").text());
+  });
+  $("#btn2").click(function(){
+    alert("HTML: " + $("#test").html());
+  });
+});
+</script>
+............
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
+-----------------------------------------------
+<script>
+$(document).ready(function(){
+      $(function(){
+var val=$("p").html();
+alert(val);
+
+var val=$("p").text();
+alert(val);
+		    });
+});
+</script>
+..........
+<p>jquery is <b>fun</b></p>
+-------------------------------------------------
+<script>
+$(document).ready(function(){
+    $("#q").click(function(){
+$("#t").html("<em>heeeeyyyyyy</em>");
+  });
+   });
+  </script>
+............
+<p>This is a paragraph.</p>
+<p id="t">This is another paragraph.</p>
+<button id="q">Add a class name to the first p element</button>
+----------------------------------------------------
+<script>
+$( document ).click(function() {
+  $( "#toggle" ).effect( "shake" );
+});
+</script>
+........
+<p>Click anywhere to shake the box.</p>
+<div id="toggle"></div>
+--------------------------------------------------
+<script>
+$(document).ready(function(){
+    $("#q").click(function(){
+	 $("p:first").addClass("intro");        
+    });
+	 $("#w").click(function(){
+	 $("p:first").removeClass("intro");
+});
+  });
+</script>
+..........
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button id="q">Add a class name to the first p element</button>
+<button id="w">remove</button>
+......
+<style>
+.intro {
+    font-size: 150%;
+    color: red;
+}
+</style>
+---------------------------------------------
+<script>
+$(document).ready(function(){
+    $("#q").click(function(){
+	$("#t").prop("disabled",true);
+  });
+   });
+  </script>
+...........
+<button id="q">Add a class name to the first p element</button>
+<button id="t">remove</button>
+-----------------------------------------
+<script>
+$(document).ready(function(){
+    $("#q").click(function(){
+$("#t").remove();
+  });
+   });
+  </script>
+........
+<p>This is a paragraph.</p>
+<p id="t">This is another paragraph.</p>
+<button id="q">Add a class name to the first p element</button>
+-----------------------------------------
+<script>
+$(document).ready(function(){
+    $("#q").click(function(){
+$("#t").empty();
+  });
+   });
+  </script>
+........
+<p>This is a paragraph.</p>
+<p id="t">This is another paragraph.</p>
+<button id="q">Add a class name to the first p element</button>
+-----------------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("<span>Hello World!</span>").appendTo("p");
+    });
+});
+</script>
+........
+<button>Insert span element at the end of each p element</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+------------------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("<span>Hello World! </span>").prependTo("p");
+    });
+});
+</script>
+..........
+<button>Insert span element at the beginning of each p element</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+--------------------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").clone().appendTo("body");
+    });
+});
+</script>
+...........
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Clone all p elements, and append them to the body element</button>
+----------------------------------------
+<script>
+$(document).ready(function(){
+$('div').click(function() {      
+        $('div').fadeOut('slow');     //     $('div').fadeOut(1000);
+		});
+		});
+</script>
+........
+<div>drsferfae</div>
+........
+div{
+    height:100px;
+    width:100px;
+    border:4px solid black;}
+---------------------------------
+<script>
+$(document).ready(function(){
+$('div').dblclick(function(){
+        $('div').fadeOut('fast');
+    });
+		    });
+</script>
+.........
+<div>iji</div>
+........
+<style>
+div{
+    height:100px;
+    width:100px;
+    border:4px solid black;}
+</style>
+------------------------------------------------
+<script>
+$(document).ready(function(){
+    $(".btn1").click(function(){
+        $("p").slideUp();
+    });
+    $(".btn2").click(function(){
+        $("p").slideDown();
+    });
+});
+</script>
+........
+<p>This is a paragraph.</p>
+<button class="btn1">Slide up</button>
+<button class="btn2">Slide down</button>
+----------------------------------
+<script>
+$(document).ready(function(){
+      
+    $('div').mouseenter(function(){  
+        $('div').hide();
+		    });
+});
+</script>
+........
+<div>drsferfae</div>
+.......
+<style>
+div{
+    height:100px;
+    width:100px;
+    border:4px solid black;}
+</style>
+--------------------------------
+<script>
+$(document).ready(function(){
+      
+$('div').mouseleave(function(){
+$('div').fadeTo('fast',0.5);
+		    });
+});
+</script>
+.........
+<div>drsferfae</div>
+.......
+<style>
+div{
+    height:100px;
+    width:100px;
+    border:4px solid black;}
+</style>
+-------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#w3s").attr("href", "https://www.w3schools.com/jquery");
+    });
+});
+</script>
+..........
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+<button>Change href Value</button>
+-----------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").removeAttr("style");
+    });
+});
+</script>
+..........
+<p style="font-size:120%;color:red">This is a paragraph.</p>
+<p style="font-weight:bold;color:blue">This is another paragraph.</p>
+<button>Remove the style attribute from all p elements</button>
+-----------------------------------
+<script>
+$(document).ready(function(){
+ $(function(){
+$("#demo").before("<i>Some title</i>");
+$("#demo").after("<b>welcome</b>");
+$("#test").text("hello");
+		    });
+});
+</script>
+..........
+<p id="demo">hI</P>
+<p id="test">bj</p>
+-----------------------------------
+<script>
+$(document).ready(function(){
+    $("p").hover(function(){
+        $(this).css("background-color", "yellow");
+        }, function(){
+        $(this).css("background-color", "pink");
+    });
+});
+</script>
+............
+<p>Hover the mouse pointer over this paragraph.</p>
+---------------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").toggleClass("main");
+    });
+});
+</script>
+..........
+<style>
+.main {
+    font-size: 120%;
+    color: red;
+}
+</style>
+.........
+<button>Toggle class "main" for p elements</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<p><b>Note:</b> Click the button more than once to see the toggle effect.</p>
+-------------------------------------------
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("p").append(" <b>Appended text</b>.");
+    });
+    $("#btn2").click(function(){
+        $("ol").append("<li>Appended item</li>");
+    });
+});
+</script>
+........
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+<button id="btn1">Append text</button>
+<button id="btn2">Append list item</button>
+----------------------------------------------
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("p").prepend("<b>Prepended text</b>. ");
+    });
+    $("#btn2").click(function(){
+        $("ol").prepend("<li>Prepended item</li>");
+    });
+});
+</script>
+..........
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+<button id="btn1">Append text</button>
+<button id="btn2">Append list item</button>
+-----------------------------------------------
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+........
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+........
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>
+-------------------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        alert($("li").length);
+    });
+});
+</script>
+.........
+<button>Alert the number of li elements</button>
+<ul>
+  <li>Coffee</li>
+  <li>Milk</li>
+  <li>Soda</li>
+</ul>
+------------------------------------------------
+	<script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+            $("p").find("span").addClass("selected");
+         });
+      </script>
+............
+<style>
+         .selected { color:red; }
+      </style>
+...........
+<div>
+         <p><span>Hello</span>, how are you?</p>
+         <p>Me? I'm <span>good</span>.</p>
+      </div>
+-----------------------------------------
+<script>
+$("button").click(function(){
+$( "div" ).find( "#span1" ).addClass("highlight").end()
+           .find("#span2") .css("background-color", "red").end()
+          .animate({height: 250});
+});
+</script>
+................
+<div>div
+<span id="span1">Span 1</span>
+<span id="span2">Span2</span>
+</div>
+------------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("li").each(function(){
+            alert($(this).text())
+        });
+    });
+});
+</script>
+..............
+<button>Alert the value of each list item</button>
+<ul>
+  <li>Coffee</li>
+  <li>Milk</li>
+  <li>Soda</li>
+</ul>
+---------------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        var $x = $("div");
+        $x.prop("color", "FF0000");
+        $x.append("The color property has the following value: " + $x.prop("color"));
+        $x.removeProp("color");
+        $x.append("<br>Now the color property has the following value: " + $x.prop("color"));
+    });
+});
+</script>
+.............
+<button>Add and remove a property</button><br><br>
+<div></div>
+-------------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("<h2>Hello world!</h2>").replaceAll("p");
+    });
+});
+</script>
+........
+<button>Replace all p elements with h2 elements</button><br>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<p>This is another paragraph.</p>
+------------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p:first").replaceWith("Hello world!");
+    });
+});
+</script>
+........
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Replace the first p element with new text</button>
+-----------------------------------
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("input:text").val("Glenn Quagmire");
+    });
+});
+</script>
+........
+<p>Name: <input type="text" name="user"></p>
+<button>Set the value of the input field</button>
+----------------------------------
+<script>
+$(document).ready(function(){
+    $("h1").add("p").add("span").css("background-color", "yellow");
+});
+</script>
+.......
+<h1>Welcome</h1>
+<p>A p element.</p>
+<p>Another p element.</p>
+<span>A span element.</span>
+<span>A span element.</span><br><br>
+<div>This example adds the same css style for both p and span elements, as the existing h1 element.</div>
+------------------------------------
+<script>
+$(document).ready(function(){
+$('p.a').nextAll().addBack()
+.css('background-color', 'yellow');
+});
+</script>
+......
+<p class="a">A</p>
+<p>B</p>
+<p>C</p>
+--------------------------------------
+<script>
+         $(document).ready(function(){
+            $("div").children(".selected").addClass("blue");
+         });
+      </script>
+........
+ <div>
+         <span>Hello</span>
+         <p class = "selected">Hello Again</p>
+         <div class = "selected">And Again</div>
+         <p class = "biggest">And One Last Time</p>
+      </div>
+.........
+<style>
+         .blue { color:blue; }
+      </style>
+--------------------------------------
+script>
+         $(document).ready(function(){
+            $(document).bind("click", function (e) {
+               $(e.target).closest("li").toggleClass("highlight");
+            });
+         });
+      </script>
+..........
+<div>
+         <p>Click any item below to see the result:</p>
+			
+         <ul>
+            <li class = "top">list item 1</li>
+            <li class = "top">list item 2</li>
+            <li class = "middle">list item 3</li>
+            <li class = "middle">list item 4</li>
+            <li class = "bottom">list item 5</li>
+            <li class = "bottom">list item 6</li>
+         </ul>
+			
+      </div>
+........
+<style>
+         .highlight { color:red; background: yellow;}
+      </style>
+------------------------------------------
+<script>
+$(document).ready(function(){
+  $("p:eq(3)").css("background-color","yellow");
+});
+</script>
+.........
+<h1>Welcome to My Homepage</h1>
+
+<p class="intro">My name is Donald.</p>
+<p>I live in Duckburg.</p>
+<p>My best friend is Mickey.</p>
+
+<p>Who is your favourite:</p>
+<ul id="choose">
+  <li>Goofy</li>
+  <li>Mickey</li>
+  <li>Pluto</li>
+</ul>
+------------------------------------------
+<script>
+$(document).ready(function(){
+    $("p:first").css("background-color", "yellow");
+});
+</script>
+.........
+<p>This is the first paragraph.</p>
+<p>This is the second paragraph.</p>
+<p>This is the last paragraph.</p>
+----------------------------------------
+<script>
+$(document).ready(function(){
+    $("p:last").css("background-color", "yellow");
+});
+</script>
+.........
+<p>This is the first paragraph.</p>
+<p>This is the second paragraph.</p>
+<p>This is the last paragraph.</p>
+--------------------------------------
+<script>
+$( "p" ).parent( ".selected" ).css( "background", "yellow" );
+</script>
+......
+<div class="selected"><p>Hello Again</p></div>
+--------------------------------------
+<script>
+var $curr = $( "#start" );
+$curr.css( "background", "#f99" );
+$( "button" ).click(function() {
+  $curr = $curr.prev();
+  $( "div" ).css( "background", "" );
+  $curr.css( "background", "#f99" );
+});
+</script>
+.............
+<div></div>
+<div></div>
+<div><span>has child</span></div>
+<div></div>
+<div></div>
+<div></div>
+<div id="start"></div>
+<div></div>
+<p><button>Go to Prev</button></p>
+.........
+<style>
+  div {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    float: left;
+    border: 2px blue solid;
+    padding: 2px;
+  }
+  span {
+    font-size: 14px;
+  }
+  p {
+    clear: left;
+    margin: 10px;
+  }
+  </style>
+---------------------------------------
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li class="hilite">Three</li>
+  <li>Four</li>
+</ul>
+ 
+<ul>
+  <li>Five</li>
+  <li>Six</li>
+  <li>Seven</li>
+</ul>
+ 
+<ul>
+  <li>Eight</li>
+  <li class="hilite">Nine</li>
+  <li>Ten</li>
+  <li class="hilite">Eleven</li>
+</ul>
+ 
+<p>Unique siblings: <b></b></p>
+.........
+<script>
+var len = $( ".hilite" ).siblings()
+  .css( "color", "red" )
+  .length;
+$( "b" ).text( len );
+</script>
+--------------------------------------------
+<script>
+$(document).ready(function(){
+    $("p").slice(1).css("background-color", "yellow");
+});
+</script>
+.........
+<h1>Welcome to My Homepage</h1>
+<p>My name is Donald (index 0).</p>
+<p>Donald Duck (index 1).</p>
+<p>I live in Duckburg (index 2).</p>
+<p>My best friend is Mickey (index 3).</p>
+-----------------------------------------------
+<script>
+      $("p").filter(".class1").css("border", "1px dotted red");
+  </script>
+..............
+<p class="class">Delhi</p>
+        <p class="class1">Hyderabad</p>
+        <p class="class2">Mumbai</p>
+-----------------------------------------------
+<script>
+      $("h1").css("background", "#c0c0c0").height("200px");
+  </script>
+..........
+<h1>This is H1</h1>
+        <h2>This is H2</h2>
+----------------------------------------------
+<script>
+      $("h1").css("background", "#c0c0c0").width("200px");
+  </script>
+..........
+<h1>This is H1</h1>
+        <h2>This is H2</h2>
+----------------------------------------------
+<script>
+      $("h1").insertAfter("#div3");
+  </script>
+.........
+<div>
+     <h1>This is H1</h1>
+     <p id="div1">This is DIV1 in P tag.</p>
+     <p id="div2">This is DIV2 in P tag.</p>
+     <p id="div3">This is DIV3 in P tag.</p>
+     <p id="div4">This is DIV4 in P tag.</p>
+    </div>
+----------------------------------------------
+ <script>
+      $("h1").insertBefore("#div3");
+  </script>
+.........
+<div>
+     <h1>This is H1</h1>
+     <p id="div1">This is DIV1 in P tag.</p>
+     <p id="div2">This is DIV2 in P tag.</p>
+     <p id="div3">This is DIV3 in P tag.</p>
+     <p id="div4">This is DIV4 in P tag.</p>
+    </div>
+----------------------------------------------
+<p id="divScroll">This is the main text of the Page, This is the sub content of the page and also it includes many subtitles. These all are done by the developers of techfunda.com and dotnetfunda.com and you can find the many intresting things in the techfunda.com and also you can be able to learn the all the technologies at free of cost with out going any where. The main theme of the techfunda.com is to provide the free tutorials to the people who want to survive in this competetive world.</p>
+        <p></p>
+........
+<style>
+#divScroll{
+color:green;
+padding:10px;
+margin:10px;
+border:2px solid;
+height:600px;
+width:800px;
+}
+</style>
+.............
+<script>      
+      $("#divScroll").scrollLeft("100");  // $("#divScroll").scrollTop("100");
+  </script>
+--------------------------------------------------
+<script>
+        $("#txtBlur").blur(function () {
+            alert("blur handler called");
+        });
+    </script>  
+...............
+<form>
+  <input id="txtBlur" type="text" value="TechFunda">
+  <input type="text" value="DotNetFunda">
+</form>
+------------------------------------------------
+<select id="dropChange">
+    <option value="TechFunda" selected="selected">Select</option>
+    <option value="SheoNarayan">Sheo Narayan</option>
+    <option value="DotNetFunda">DotNetFunda</option>
+    <option value="ITFunda">IT Funda</option>
+    <option value="MyFunda">My Funda</option>
+    <option value="KidsFunda">KidsFunda</option>
+    <option value="FarmingFunda">FarmingFunda</option>
+    <option value="FundooVideo">FundooVideo</option>     
+</select>
+..........
+ <script>
+        $("#dropChange").change(function () {
+           alert("This is the OutPut of .change() in jQuery");
+       });
+        </script>
+--------------------------------------------
+<form>
+<input type="button" id="btnAction" value="Constatnt" style="color:blue;background-color:yellow"/>
+<input type="button" name="btn" id="btnBindAction" value="Bind"/>      
+<input type="button" name="btn" id="btnUnbindAction" value="UnBind"/>
+</form>
+..................
+	<script>
+       function bindAction() {
+           alert("I am active !");
+       }
+
+       $("#btnBindAction").click(function () {
+           $("#btnAction").bind('click', bindAction).val("Click Now");
+       });
+
+       $("#btnUnbindAction").click(function () {
+           $("#btnAction").unbind('click', bindAction).val("Simple Button");
+       });
+  </script>
+----------------------------------------------
+input type="button" id="btnAction" value="Constatnt" style="color:blue;background-color:yellow"/>
+<input type="button" name="btn" id="btnBindAction" value="Bind"/>      
+<input type="button" name="btn" id="btnUnbindAction" value="UnBind"/>
+</form>	
+..................
+<script>
+       function bindAction() {
+           alert("I am active !");
+       }
+
+       $("#btnBindAction").click(function () {
+           $("#btnAction").bind('mouseenter click', bindAction).val("Mouse hover Now and then click");
+       });
+
+       $("#btnUnbindAction").click(function () {
+           $("#btnAction").unbind('mouseenter click', bindAction).val("Simple button");
+       });
+  </script>
+------------------------------------------------
+<div id="pEventXEventY">This page is event.pageX and event.pageY page, you can check by moving the curser on the color surrounded area. </div>
+..................
+    <script>
+        $("#pEventXEventY").bind("mousemove", function (e) {
+            $(this).text("pageX: " + e.pageX + " pageY: " + e.pageY);
+        });
+    </script>
+--------------------------------------------------
+<img src="idonotknow.jpg" id="imgError" />
+.................
+    <script>
+        $("#imgError").error(function () {
+            alert("missing image");
+        });
+    </script>
+------------------------------------------------
+<div id="divEventTarget" style="background:#dedede;width:300px;height:100px;">
+  <br />
+    <p>event.target demo <br />
+        <span>
+           this is span 
+        </span>
+        <br />- This is the p
+    </p>
+  <br />
+</div>
+
+<script>
+    $("#divEventTarget").click(function (e) {
+        alert(e.target.nodeName);
+    });
+</script>
+-------------------------------------------
+<form>
+        User Id   : <input type="text" name="user" id="txtFocus"/>
+        Password :  <input type="password" name="password" id="txtFocus1"/>
+	</form>
+ <script>
+     $("#txtFocus, #txtFocus1").focus(function () {
+         alert("got focus");
+     });
+</script>
+------------------------------------------------
+<script>
+$(document).ready(function(){
+ $( "p" ).last().addClass( "selected" );
+
+});
+</script>
+.....
+<style>
+  p {
+    margin: 8px;
+    font-size: 16px;
+  }
+  .selected {
+    color: blue;
+  }
+  .highlight {
+    background: yellow;
+  }
+  </style>
+......
+<p>Hello</p>
+<p>and</p>
+<p>Goodbye</p>
+-----------------------------------------------
+functions in jquery-
+<script>
+$( "div" ).addClass(function( index, currentClass ) {
+  var addedClass;
+ if ( currentClass === "red" ) {
+    addedClass = "green";
+    $( "p" ).text( "There is one green div" );
+  }
+ 
+  return addedClass;
+});
+</script>
+.....
+<div>This div should be white</div>
+ <div class="red">This div will be green because it now has the "green" and "red" classes.
+   It would be red if the addClass function failed.</div>
+ <div>This div should be white</div>
+ <p>There are zero green divs</p>
+......
+<style>
+  div {
+    background: white;
+  }
+  .red {
+    background: red;
+  }
+  .red.green {
+    background: green;
+  }
+  </style>
+-----------------------------------------------------------
+ <script>
+$(document).ready(function(){
+ $( "p" )
+  .on( "mouseenter", function() {
+    $( this ).css({
+      "background-color": "yellow",
+      "font-weight": "bolder"
+    });
+  })
+  .on( "mouseleave", function() {
+    var styles = {
+      backgroundColor : "#ddd",
+      fontWeight: ""
+    };
+    $( this ).css( styles );
+  });
+});
+</script>
+.....
+<p>Move the mouse over a paragraph.</p>
+<p>Like this one or the one above.</p>
+.....
+<style>
+  p {
+    color: green;
+  }
+  </style>
+----------------------------------------------------
+<script>
+$(document).ready(function(){
+$( "div" ).on( "click", function() {
+  $( this ).css({
+    width: function( index, value ) {
+      return parseFloat( value ) * 1.2;
+    },
+    height: function( index, value ) {
+      return parseFloat( value ) * 1.2;
+    }
+  });
+});
+});
+</script>
+.......
+<div>click</div>
+<div>click</div>
+.......
+ <style>
+  div {
+    width: 20px;
+    height: 15px;
+    background-color: #f33;
+  }
+  </style>
+--------------------------------------------
+Keyup event-The keyup event occurs when a keyboard key is released.
+<script>
+$(document).ready(function(){
+$( "input" )
+  .keyup(function() {
+    var value = $( this ).val();
+    $( "p" ).text( value );
+  })
+  .keyup();
+});
+</script>
+......
+<input type="text" value="some text">
+<p></p>
+.....
+ <style>
+  p {
+    color: blue;
+    margin: 8px;
+  }
+  </style>
+----------------------------------------------------
+<script>
+$(document).ready(function(){
+$( "button" ).click(function() {
+  $( "div" ).each(function( index, element ) {
+    // element == this
+    $( element ).css( "backgroundColor", "yellow" );
+    if ( $( this ).is( "#stop" ) ) {
+      $( "span" ).text( "Stopped at div index #" + index );
+      return false;
+    }
+  });
+});
+});
+</script>
+......
+<button>Change colors</button>
+<span></span>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div id="stop">Stop here</div>
+<div></div>
+<div></div>
+<div></div>
+......
+<style>
+  div {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    float: left;
+    border: 2px blue solid;
+    text-align: center;
+  }
+  span {
+    color: red;
+  }
+  </style>
+-------------------------------------------
+<script>
+$( "body" ).find( "div" ).eq( 2 ).addClass( "blue" );
+</script>
+......
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+.......
+  <style>
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    float: left;
+    border: 2px solid blue;
+  }
+  .blue {
+    background: blue;
+  }
+  </style>
+------------------------------------------------
+<script>
+$( "p span" ).first().addClass( "highlight" );
+</script>
+......
+<p>
+  <span>Look:</span>
+  <span>This is some text in a paragraph.</span>
+  <span>This is a note about it.</span>
+</p>
+.......
+  <style>
+  .highlight{
+    background-color: yellow
+  }
+  </style>
+----------------------------------------
+

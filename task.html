@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<style>
+table,th, td {
+border:1px solid black;
+width:50px;
+}
+</style>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#tr1").click(function(){
+    $("#tr").hide();
+	});
+$("#tr2").click(function(){
+  $("#tr").show();
+});
+});
+</script>
+</head>
+<body>
+    <p id="tr">This is another paragraph.</p>
+    <button id="tr1">Click me</button>
+    <button id="tr2">show</button>
+<br>
+<body>
+</html>
